@@ -1,28 +1,64 @@
-== README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+NEED TO HAVE
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+As a visitor, I want to see a directory of the restaurants available.
+As a visitor, when I click on a restaurant, I want to be able to see:
+  address
+  neighbourhood
+  price range
+  summary
+  a list of available timeslots
+As a visitor, I want to sign up for a customer account so that I can make reservations online.
+As a customer, I want to be able to make a reservation online.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+
+
+SHOULD HAVE
+
+As a customer, I want to receive an email confirmation after I've made a reservation.
+As the restaurant owner, I want to see the list of the weeks reservations.
+As a visitor, I would like to be able to view restaurants based on their cuisine category (e.g. Italian). This can be down with a drop-down menu using collection_select.
+ As a customer, I want to see menu
+
+
+
+COULD HAVE
+
+As a customer, I want to receive loyalty points when I make a reservation.
+As a customer, I want to see my loyalty points in my account profile.
+As the restaurant owner, I want to see my customer list with how many points each person has and how much they have spent online.
+
+
+
+
+ASSUMPTIONS
+
+A restaurant can only be open from 11am - 8pm, 7 days a week.
+A restaurant can only hold 100 people in any given time slot.
+A reservation can be for a party of 2 to 20 people.
+
+
+
+User
+* first_name.string
+* last_name.string
+* email.string
+* password_digest.string
+
+Reservation
+* user_id.id
+* restaurant_id.id
+* dinner_time.datetime
+* party_size.integer
+
+Restaurant
+* user_id (owner).id
+* address.string
+* neighbourhood..string
+* price_range.integer
+* Summary.text
+* open_time.datetime
+* close_time.datetime
+* capacity.integer
