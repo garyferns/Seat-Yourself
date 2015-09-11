@@ -17,11 +17,20 @@ Rails.application.routes.draw do
 
   # get 'users/create'
 
+get 'login' => 'sessions#new'
+get 'logout' => 'sessions#destroy'
+
+resources :sessions, only: [:create]
+
 resources :users,  only: [:new, :create]
 
 resources :restaurants, only: [:new, :create] do 
   resources :reservations
 end 
+
+root 'users#new'
+
+
   # end
 
   # The priority is based upon order of creation: first created -> highest priority.

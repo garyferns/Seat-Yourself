@@ -30,7 +30,3 @@ class ReservationsController < ApplicationController
   end  
 end
 
-* user_id.id
-* restaurant_id.id
-* dinner_time.datetime
-* party_size.integer
