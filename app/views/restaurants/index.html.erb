@@ -15,7 +15,7 @@
 	<% @restaurants.each do |restaurant| %>
 	<div class = 'restaurant'>
 
-	<%= link_to image_tag(restaurant.url, height: "50", width: "50"), restaurant_path(restaurant.id) %>
+		<%= link_to image_tag(restaurant.url, height: "50", width: "50"), restaurant_path(restaurant.id) %>
 
 		<p class = 'restaurant-title'> 
 		<%= link_to restaurant.name, restaurant %>
