@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150910200903) do
+ActiveRecord::Schema.define(version: 20150911234631) do
 
   create_table "reservations", force: :cascade do |t|
     t.datetime "dinner_time"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20150910200903) do
     t.text     "summary"
     t.datetime "open_time"
     t.datetime "close_time"
+    t.string   "url"
   end
 
   add_index "restaurants", ["owner_id"], name: "index_restaurants_on_owner_id"

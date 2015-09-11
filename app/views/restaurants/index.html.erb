@@ -6,26 +6,59 @@
         <%= link_to "Log in", login_path %> or <%= link_to "Sign up", new_user_path %>
       <% end %>
 
+<div class='restaurants-container'>
+
 <h1>All Restaurants</h1>
 
 <%= link_to "Create a new restaurant", new_restaurant_path %>
+<br>
+	<% @restaurants.each do |restaurant| %>
+	<div class = 'restaurant'>
 
-		<% @restaurants.each do |restaurant| %>
+	<%= link_to image_tag(restaurant.url, height: "50", width: "50"), restaurant_path(restaurant.id) %>
 
-				<%= link_to restaurant.name, restaurant %>
+		<p class = 'restaurant-title'> 
+		<%= link_to restaurant.name, restaurant %>
+		</p>
 
-				Neighbourhood: <%= restaurant.neighbourhood %>
-				Address: <%= restaurant.address %> 
-				Price range: <%= restaurant.price_range %> 
-				Summary: <%= restaurant.summary %>
-				Open time: <%= restaurant.open_time %>
-				Close time: <%= restaurant.close_time %>
-				Capacity: <%= restaurant.capacity %> 
-				
+		<p class = 'restaurant-neighbourhood'>
+		Neighbourhood: <%= restaurant.neighbourhood %>
+		</p>
 
-				<% if current_user && restaurant.owner == current_user %>
-					<%= link_to 'Edit', edit_restaurant_path(restaurant.id) %>
-				<% end %> 
+		<p class = 'restaurant-address'>
+		Address: <%= restaurant.address %> 
+		</p>
+		
+		<p class = 'restaurant-price'>
+		Price range: <%= restaurant.price_range %> 
+		</p>
+
+		<p class = 'restaurant-summary'>
+		Summary: <%= restaurant.summary %>
+		</p>
+
+		<p class = 'restaurant-opentime'>
+		Open time: <%= restaurant.open_time %>
+		</p>
+		
+		<p class = 'restaurant-closetime'>
+		Close time: <%= restaurant.close_time %>
+		</p>
+
+		<p class = 'restaurant-capacity'>
+		Capacity: <%= restaurant.capacity %> 
+		</p>		
+		
+		<p class = 'product-edit'>
+			<% if current_user && restaurant.owner == current_user %>
+				<%= link_to 'Edit', edit_restaurant_path(restaurant.id) %>
+			<% end %> 
+		</p>
+	
+	</div>
+
+</div>
+
 		<% end %>
 
 
