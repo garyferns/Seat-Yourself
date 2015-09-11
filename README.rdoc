@@ -1,15 +1,21 @@
 
 NEED TO HAVE
 
-As a visitor, I want to see a directory of the restaurants available.
-As a visitor, when I click on a restaurant, I want to be able to see:
-  address
-  neighbourhood
-  price range
-  summary
-  a list of available timeslots
-As a visitor, I want to sign up for a customer account so that I can make reservations online.
+X	As a visitor, I want to see a directory of the restaurants available.
+X	As a visitor, when I click on a restaurant, I want to be able to see:
+  		address
+  		neighbourhood
+  		price range
+  		summary
+X	As a visitor, I want to sign up for a customer account so that I can make reservations online. 
+
 As a customer, I want to be able to make a reservation online.
+
+
+FRIDAY, SEPT 11 -- To-do's
+- Update restaurant#show 
+- Create a reservation link
+- Create reservation view 
 
 
 

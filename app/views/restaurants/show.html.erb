@@ -1,2 +1,17 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<h1> <%= @restaurant.name %> <h1>
+
+<p> 
+
+	Neighbourhood: <%= @restaurant.neighbourhood %>
+	Address: <%= @restaurant.address %> 
+	Price range: <%= @restaurant.price_range %> 
+	Summary: <%= @restaurant.summary %>
+	Open time: <%= @restaurant.open_time %>
+	Close time: <%= @restaurant.close_time %>
+	Capacity: <%= @restaurant.capacity %> 
+
+</p>
+
+	<% if current_user %>
+	<%= link_to 'Make a reservation', new_restaurant_reservation_path(:restaurant_id) %>
+				<% end %> 

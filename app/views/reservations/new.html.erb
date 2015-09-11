@@ -1,0 +1,28 @@
+<p> Reservation for <%= @restaurant.name %> </p>
+
+<p>
+
+<div class="field">
+	<%= f.label :first_name %><br />
+	<%= f.text_field :first_name %>
+</div>
+
+<div class="field">
+	<%= f.label :last_name %><br />
+	<%= f.text_field :last_name %>
+</div>
+
+<div class="field">
+	<%= f.label :email %><br />
+	<%= f.text_field :email %>
+</div>
+
+<div class="field">
+	<%= f.label :dinner_time %><br />
+	<%= f.number_field :dinner_time %>
+</div>
+
+<div class="field">
+	<%= f.label :party_size %><br />
+	<%= f.number_field :party_size %>
+</div>
