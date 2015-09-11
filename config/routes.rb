@@ -24,7 +24,7 @@ resources :sessions, only: [:create]
 
 resources :users,  only: [:new, :create]
 
-resources :restaurants, only: [:new, :create] do 
+resources :restaurants do 
   resources :reservations
 end 
 

@@ -18,6 +18,7 @@ class RestaurantsController < ApplicationController
   		redirect_to restaurants_path 
   	else 
   		render :new
+    end 
   end 
 
   private
