@@ -21,7 +21,7 @@ class ReservationsController < ApplicationController
   def destroy
   	@reservation = Reservation.find(params[:id])
   	@reservation.destroy
-  	redirect_to restaurants_url
+  	redirect_to restaurants_path
   end
 
   def index

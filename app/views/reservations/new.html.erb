@@ -1,6 +1,6 @@
 <p> Reservation </p>
 
-<%= form_for@reservation, url: new_restaurant_reservation_path do |f| %>
+<%= form_for @reservation, url: restaurant_reservation_path(:restaurant_id, :id) do |f| %>
 
 <div class="field">
 	<%= f.label :dinner_time %><br />
