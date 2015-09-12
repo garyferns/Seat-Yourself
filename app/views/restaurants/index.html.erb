@@ -49,7 +49,7 @@
 		Capacity: <%= restaurant.capacity %> 
 		</p>		
 		
-		<p class = 'product-edit'>
+		<p class = 'restaurant-edit'>
 			<% if current_user && restaurant.owner == current_user %>
 				<%= link_to 'Edit', edit_restaurant_path(restaurant.id) %>
 			<% end %> 
