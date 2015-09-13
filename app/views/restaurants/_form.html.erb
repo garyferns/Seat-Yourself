@@ -28,8 +28,9 @@
 
 <div class="field">
 	<%= f.label :price_range %><br />
-	<%= f.number_field :price_range %>
+	<%= f.number_field :price_range, {max: 5, min: 0} %>
 </div>
+
 
 <div class="field">
 	<%= f.label :summary %><br />

@@ -1,11 +1,3 @@
-<%= link_to 'Home', root_path %>
-		<% if current_user %>
-		Signed in as: 
-		<%= current_user.email %>. <%= link_to "Log out", logout_path("current") %>
-      <% else %>
-        <%= link_to "Log in", login_path %> or <%= link_to "Sign up", new_user_path %>
-      <% end %>
-
 <div class='restaurants-container'>
 
 <h1>All Restaurants</h1>
@@ -55,10 +47,13 @@
 			<% end %> 
 		</p>
 	
+	<% end %>
+
 	</div>
 
 </div>
 
-		<% end %>
+		
+
 
 

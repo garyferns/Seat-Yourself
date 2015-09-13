@@ -1,4 +1,10 @@
 class ReservationsController < ApplicationController
+
+  def load_restaurant
+    @restaurant = Restaurant.find(params[:restaurant_id])
+  end 
+
+
   def new
     @reservation = Reservation.new
   end
@@ -32,5 +38,7 @@ class ReservationsController < ApplicationController
   def reservation_params
     params.require(:reservation).permit(:dinner_time, :party_size, :restaurant_id)
   end  
+
+  
 end
 

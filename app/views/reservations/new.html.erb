@@ -4,7 +4,12 @@
 
 <div class="field">
 	<%= f.label :dinner_time %><br />
-	<%= f.number_field :dinner_time %>
+	<%= f.text_field :dinner_time, 'data-behaviour' => 'datepicker' %>
+
+<script type="text/javascript">
+  $('[data-behaviour~=datepicker]').datepicker();
+</script>
+
 </div>
 
 <div class="field">
