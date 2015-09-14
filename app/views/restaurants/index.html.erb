@@ -14,21 +14,21 @@
 		</aside>
 
 		<aside>
-			<%= link_to image_tag(restaurant.url, height: "50", width: "50"), restaurant_path(restaurant.id) %>
+			<%= link_to image_tag(restaurant.image, height: "50", width: "50"), restaurant_path(restaurant.id) %>
 		</aside>
 
 		<article>
-		
+
 		<p class = 'restaurant-neighbourhood'>
 		Neighbourhood: <%= restaurant.neighbourhood %>
 		</p>
 
 		<p class = 'restaurant-address'>
-		Address: <%= restaurant.address %> 
+		Address: <%= restaurant.address %>
 		</p>
-		
+
 		<p class = 'restaurant-price'>
-		Price range: <%= restaurant.price_range %> 
+		Price range: <%= restaurant.price_range %>
 		</p>
 
 		<p class = 'restaurant-summary'>
@@ -38,28 +38,28 @@
 		<p class = 'restaurant-opentime'>
 		Open time: <%= restaurant.open_time %>
 		</p>
-		
+
 		<p class = 'restaurant-closetime'>
 		Close time: <%= restaurant.close_time %>
 		</p>
 
 		<p class = 'restaurant-capacity'>
-		Capacity: <%= restaurant.capacity %> 
-		</p>		
-		
+		Capacity: <%= restaurant.capacity %>
+		</p>
+
 		<p class = 'restaurant-edit'>
 			<% if current_user && restaurant.owner == current_user %>
 				<%= link_to 'Edit', edit_restaurant_path(restaurant.id) %>
-			<% end %> 
+			<% end %>
 		</p>
-	
+
 		</article>
 
 	</section>
 
 	<% end %>
 
-	
+
 
 
 
@@ -67,7 +67,7 @@
 
 </div>
 
-		
+
 
 
 
