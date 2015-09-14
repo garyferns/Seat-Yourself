@@ -13,17 +13,17 @@
 
 <div class="field">
 	<%= f.label :name %><br />
-	<%= f.text_field :name %>
+	<%= f.text_field :name, placeholder: "write here" %>
 </div>
 
 <div class="field">
 	<%= f.label :address %><br />
-	<%= f.text_field :address %>
+	<%= f.text_field :address, placeholder: "write here" %>
 </div>
 
 <div class="field">
 	<%= f.label :neighbourhood %><br />
-	<%= f.text_field :neighbourhood %>
+	<%= f.text_field :neighbourhood, placeholder: "write here" %>
 </div>
 
 <div class="field">
@@ -34,7 +34,7 @@
 
 <div class="field">
 	<%= f.label :summary %><br />
-	<%= f.text_area :summary %>
+	<%= f.text_area :summary, placeholder: "write about your restaurant" %>
 </div>
 
 <div class="field">
@@ -53,11 +53,11 @@
 </div>
 
 <div class = "field">
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
+    <%= f.label :image %><br />
+    <%= f.text_field :image, placeholder: "insert image url" %>
 </div>
 
  <div class="actions"><%= f.submit %></div>
- 
-<% end %> 
+
+<% end %>
 
