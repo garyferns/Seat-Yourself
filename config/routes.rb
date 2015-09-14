@@ -26,6 +26,7 @@ resources :users,  only: [:new, :create]
 
 resources :restaurants do 
   resources :reservations
+  resources :cuisine_type
 end 
 
 root 'users#new'
