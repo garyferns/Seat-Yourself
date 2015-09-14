@@ -36,7 +36,19 @@
 	<% end %>
 
 
+<% @restaurant.reservations.each do |reservation| %>
 
+	<p class = 'reservation-user'>
+		User: <%= reservation.user.email %>
+	</p>
+	<p class = 'reservation-dinnertime'>
+		Time: <%= reservation.dinner_time %>
+	</p>
+	<p class = 'reservation-partysize'>
+		Party Size: <%= reservation.party_size %>
+	</p>
+
+<% end %>
 
 
 
