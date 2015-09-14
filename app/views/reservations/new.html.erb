@@ -1,5 +1,11 @@
 <p> Reservation </p>
 
+<% if @reservation.errors.any? %>
+	<% @reservation.errors.full_messages.each do |error| %>
+		<%= error.inspect %> <br/>
+	<% end %>
+<% end %>
+
 <%= form_for [@restaurant, @reservation] do |f| %>
 
 <div class="field">
