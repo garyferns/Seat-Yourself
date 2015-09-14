@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require bootstrap-datepicker
 
 $(document).ready(function() {
   var menuToggle = $('#js-mobile-menu').unbind();
