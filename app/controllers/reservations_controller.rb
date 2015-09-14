@@ -14,11 +14,11 @@ before_filter :load_restaurant
   	@reservation = @restaurant.reservations.build(reservation_params)
   	@reservation.user = current_user
 
-  	if @reservation.save 
-  		redirect_to profile_path, :notice => "Successful Reservation!"
-  	else 
+  	if @reservation.save
+  		redirect_to profile_path, notice: "Successful Reservation!"
+  	else
   		render 'restaurants/show'
-  	end 
+  	end
   end
 
   def destroy
@@ -28,20 +28,20 @@ before_filter :load_restaurant
   end
 
   def index
-  	@reservatons = Reservation.all 
+  	@reservatons = Reservation.all
   end
 
-  private 
+  private
 
   def reservation_params
     params.require(:reservation).permit(:dinner_time, :party_size, :restaurant_id)
-  end  
+  end
 
    def load_restaurant
     @restaurant = Restaurant.find(params[:restaurant_id])
-  end 
+  end
 
 
-  
+
 end
 
