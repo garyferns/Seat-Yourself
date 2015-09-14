@@ -1,3 +1,14 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bourbon";
+@import "neat";
+
+section {
+  @include outer-container;
+  aside { @include span-columns(2); }
+  article { @include span-columns(8); }
+  p {margin: 0px;}
+}
+

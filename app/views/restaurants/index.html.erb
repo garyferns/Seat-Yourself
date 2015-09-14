@@ -7,12 +7,18 @@
 	<% @restaurants.each do |restaurant| %>
 	<div class = 'restaurant'>
 
-		<%= link_to image_tag(restaurant.url, height: "50", width: "50"), restaurant_path(restaurant.id) %>
+	<section>
 
-		<p class = 'restaurant-title'> 
-		<%= link_to restaurant.name, restaurant %>
-		</p>
+		<aside>
+			<%= link_to restaurant.name, restaurant %>
+		</aside>
 
+		<aside>
+			<%= link_to image_tag(restaurant.url, height: "50", width: "50"), restaurant_path(restaurant.id) %>
+		</aside>
+
+		<article>
+		
 		<p class = 'restaurant-neighbourhood'>
 		Neighbourhood: <%= restaurant.neighbourhood %>
 		</p>
@@ -47,7 +53,15 @@
 			<% end %> 
 		</p>
 	
+		</article>
+
+	</section>
+
 	<% end %>
+
+	
+
+
 
 	</div>
 
