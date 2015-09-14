@@ -11,11 +11,11 @@ before_filter :load_restaurant
   end
 
   def create
-  	@reservation = @restaurant.reservation.build(reservation_params)
+  	@reservation = @restaurant.reservations.build(reservation_params)
   	@reservation.user = current_user
 
   	if @reservation.save 
-  		redirect_to restaurants_path, notice: 'Successful reservation!'
+  		redirect_to profile_path
   	else 
   		render 'restaurants/show'
   	end 

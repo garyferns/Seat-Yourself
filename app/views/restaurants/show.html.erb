@@ -1,6 +1,6 @@
 <h1> <%= @restaurant.name %> </h1>
 
-<%= image_tag(@restaurant.url, height: "100", width: "100") %>
+<%= image_tag(@restaurant.image, height: "100", width: "100") %>
 
 	<p class = 'restaurant-neighbourhood'>
 	Neighbourhood: <%= @restaurant.neighbourhood %>
@@ -10,8 +10,8 @@
 	Address: <%= @restaurant.address %>
 	</p>
 
-	<p class = 'restaurant-price'> 
-	Price range: <%= @restaurant.price_range %> 
+	<p class = 'restaurant-price'>
+	Price range: <%= @restaurant.price_range %>
 	</p>
 
 	<p class = 'restaurant-summary'>
@@ -27,13 +27,13 @@
 	</p>
 
 	<p class = 'restaurant-capacity'>
-	Capacity: <%= @restaurant.capacity %> 
+	Capacity: <%= @restaurant.capacity %>
 	</p>
 
 
 	<% if current_user %>
 		<%= link_to 'Make a reservation', new_restaurant_reservation_path(@restaurant.id) %>
-	<% end %> 
+	<% end %>
 
 
 
