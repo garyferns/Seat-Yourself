@@ -15,7 +15,7 @@ before_filter :load_restaurant
   	@reservation.user = current_user
 
   	if @reservation.save 
-  		redirect_to profile_path
+  		redirect_to profile_path, :notice => "Successful Reservation!"
   	else 
   		render 'restaurants/show'
   	end 
