@@ -39,15 +39,15 @@
 
 <div class="field">
 	<%= f.label :open_time %><br />
-	<%= f.time_select(:open_time, {:minute_step => 60, ampm: true}) %>
+	<%= f.time_select(:open_time, :discard_minute => true, ampm: true) %>
 </div>
 
 <div class="field">
 	<%= f.label :close_time %><br />
-	<%= f.time_select(:open_time, {:minute_step => 60, ampm: true}) %>
+	<%= f.time_select(:close_time, :discard_minute => true, ampm: true) %>
 </div>
 
-<div class="field">
+<div class="field"
 	<%= f.label :capacity %><br />
 	<%= f.number_field :capacity %>
 </div>
