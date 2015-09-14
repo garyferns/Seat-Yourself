@@ -19,10 +19,11 @@ Rails.application.routes.draw do
 
 get 'login' => 'sessions#new'
 get 'logout' => 'sessions#destroy'
+get 'profile' => 'users#show'
 
 resources :sessions, only: [:create]
 
-resources :users,  only: [:new, :create]
+resources :users
 
 resources :restaurants do 
   resources :reservations
